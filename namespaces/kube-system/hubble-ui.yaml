@@ -30,3 +30,7 @@ spec:
     rollOutPods: true
     timescape:
       enabled: true
+    grafana:
+      createConfigMaps: true
+      enabled: true
+      enabledNodesGraph: true
