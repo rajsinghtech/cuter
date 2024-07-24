@@ -3,8 +3,6 @@ kind: HelmRelease
 metadata:
   name: tenant
 spec:
-  releaseName: tenant
-  targetNamespace: minio
   interval: 2m
   chart:
     spec:
