@@ -6,7 +6,7 @@ spec:
   interval: 2m
   chart:
     spec:
-      chart: minio-operator
+      chart: operator
       version: 6.0.1
       sourceRef:
         kind: HelmRepository
@@ -25,12 +25,12 @@ spec:
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: minio-tenant
+  name: tenant
 spec:
   interval: 2m
   chart:
     spec:
-      chart: minio-tenant
+      chart: tenant
       version: 6.0.1
       sourceRef:
         kind: HelmRepository
