@@ -26,5 +26,6 @@ spec:
   values:
     grafana:
       admin:
+        existingSecret: "grafana"
         passwordKey: admin
         userKey: admin
