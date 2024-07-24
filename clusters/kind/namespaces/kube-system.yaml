@@ -8,6 +8,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: namepsaces/kube-system
+  path: namespaces/kube-system
   prune: true
   timeout: 1m
