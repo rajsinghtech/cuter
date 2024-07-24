@@ -23,7 +23,34 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    # export:
-    #   mode: ""
-    # rbac:
-    #   enabled: false
+    dnsPolicy: ClusterFirstWithHostNet
+    export:
+      extraEnv:
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: hubble-enterprise-export-credentials
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: hubble-enterprise-export-credentials
+              key: AWS_SECRET_ACCESS_KEY
+      mode: fluentd
+      fluentd:
+        output: |-
+          @type s3
+          s3_endpoint "http://minio.minio.svc.cluster.local/"
+          s3_bucket "timescape"
+          path "hubble-events/%Y/%m/%d/#{hostname}/${tag}-"
+          # Required for self-hosted S3 compatible storage when subdomains per-bucket isn't available.
+          force_path_style true
+          store_as gzip
+          <format>
+            @type json
+          </format>
+          <buffer tag,time>
+            timekey 5m
+            timekey_wait 1m
+            timekey_use_utc true # use utc
+          </buffer>

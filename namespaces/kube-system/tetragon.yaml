@@ -25,3 +25,4 @@ spec:
     tetragon:
       btf: /sys/kernel/btf/vmlinux
       enabled: true
+    exportDirectory: "/var/run/cilium/hubble"
