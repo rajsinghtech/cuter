@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: hubble-timescape
+  labels:
+    app.kubernetes.io/part-of: flux
+    app.kubernetes.io/component: monitoring
+spec:
+  namespaceSelector:
+    matchNames:
+      - "hubble-timescape"
+  selector:
+    matchLabels:
+      app.kubernetes.io/part-of: hubble-timescape
+  podMetricsEndpoints:
+    - port: "server-metrics"
+      interval: "30s"
+      honorLabels: true
+    - port: "metrics"
+      interval: "30s"
+      honorLabels: true
+    - port: "ingest-metrics"
+      interval: "30s"
+      honorLabels: true
+---

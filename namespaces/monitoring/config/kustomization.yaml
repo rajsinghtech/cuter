@@ -5,3 +5,4 @@ namespace: monitoring
 resources:
   - flux.yaml
   - cilium.yaml
+  - hubble.yaml
