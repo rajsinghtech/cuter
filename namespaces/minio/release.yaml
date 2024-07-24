@@ -3,6 +3,8 @@ kind: HelmRelease
 metadata:
   name: operator
 spec:
+  releaseName: operator
+  targetNamespace: minio
   interval: 2m
   chart:
     spec:
@@ -27,6 +29,8 @@ kind: HelmRelease
 metadata:
   name: tenant
 spec:
+  releaseName: tenant
+  targetNamespace: minio
   interval: 2m
   chart:
     spec:
