@@ -24,3 +24,7 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    grafana:
+      admin:
+        passwordKey: admin
+        userKey: admin
