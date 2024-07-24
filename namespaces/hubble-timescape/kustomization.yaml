@@ -4,3 +4,4 @@ namespace: hubble-timescape
 resources:
   - namespace.yaml
   - release.yaml
+  - secret.yaml
