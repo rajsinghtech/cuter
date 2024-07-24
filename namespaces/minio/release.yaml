@@ -1,8 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: minio-operator
-  namespace: kube-system
+  name: operator
 spec:
   interval: 2m
   chart:
@@ -27,7 +26,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: minio-tenant
-  namespace: kube-system
 spec:
   interval: 2m
   chart:
