@@ -13,6 +13,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: isovalent
+        namespace: kube-system
   install:
     remediation:
       retries: 3
@@ -23,10 +24,14 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    serviceAccount:
-      create: true
-      name: hubble-ui
-      annotations: {}
-    rollOutPods: true
-    timescape:
-      enabled: true
+    clickhouse:
+      cluster:
+        enabled: true
+        volumes:
+          data:
+            size: 5Gi
+            # storageClassName: ""
+    ingester:
+      bucket:
+        uri: "file:///path/to/data"
+      

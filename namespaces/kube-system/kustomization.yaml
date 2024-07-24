@@ -8,4 +8,3 @@ resources:
   - hubble-ui.yaml  
   - tetragon.yaml
   - helm-repository.yaml
-  - hubble-timescape.yaml
