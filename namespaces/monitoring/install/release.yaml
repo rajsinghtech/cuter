@@ -29,6 +29,12 @@ spec:
         existingSecret: "grafana"
         passwordKey: admin
         userKey: admin
+      dashboards:
+        default:
+          flux2:
+            gnetId: 16714
+            revision: 1
+            datasource: Prometheus
     alertmanager:
       enabled: false
     prometheus:
