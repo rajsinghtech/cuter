@@ -7,7 +7,7 @@ spec:
   interval: 2m
   chart:
     spec:
-      chart: clickhouse-operator
+      chart: altinity-clickhouse-operator
       version: 0.22.0
       sourceRef:
         kind: HelmRepository
