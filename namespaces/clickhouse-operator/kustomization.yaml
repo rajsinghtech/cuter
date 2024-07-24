@@ -4,4 +4,4 @@ namespace: clickhouse-operator
 resources:
   - helm-repository.yaml
   - namespace.yaml
-  - clickhouse-operator.yaml
+  - release.yaml
