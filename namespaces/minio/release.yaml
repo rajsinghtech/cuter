@@ -8,10 +8,35 @@ spec:
   chart:
     spec:
       chart: minio-operator
-      version: 0.22.0
+      version: x
       sourceRef:
         kind: HelmRepository
-        name: minio-operator
+        name: minio
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: minio-tenant
+  namespace: kube-system
+spec:
+  interval: 2m
+  chart:
+    spec:
+      chart: minio-tenant
+      version: x
+      sourceRef:
+        kind: HelmRepository
+        name: minio
   install:
     remediation:
       retries: 3
