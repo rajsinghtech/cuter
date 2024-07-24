@@ -71,3 +71,6 @@ spec:
         enabled: true
       tls:
         enabled: true
+      metrics:
+        enabled:
+          - flow_export

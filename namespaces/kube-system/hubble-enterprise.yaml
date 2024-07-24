@@ -25,6 +25,10 @@ spec:
   values:
     dnsPolicy: ClusterFirstWithHostNet
     export:
+      grafana:
+        dashboards:
+          enabled: true
+          namespace: monitoring
       extraEnv:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
