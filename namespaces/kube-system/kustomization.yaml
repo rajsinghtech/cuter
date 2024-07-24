@@ -7,3 +7,4 @@ resources:
   - hubble-enterprise.yaml
   - hubble-ui.yaml  
   - tetragon.yaml
+  - helm-repository.yaml
