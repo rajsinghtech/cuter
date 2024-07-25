@@ -16,9 +16,15 @@ spec:
         name: isovalent
   interval: 10m0s
   values:
+    dashboards:
+      enabled: true
+      namespace: monitoring
     prometheus:
       enabled: true
     operator:
+      dashboards:
+        enabled: true
+        namespace: monitoring
       replicas: 1
       prometheus:
         enabled: true
@@ -67,3 +73,6 @@ spec:
       metrics:
         enabled:
           - flow_export
+        dashboards:
+          enabled: true
+          namespace: monitoring
