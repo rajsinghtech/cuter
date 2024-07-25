@@ -24,12 +24,12 @@ spec:
     keepHistory: false
   values:
     enterprise:
-      enabled: true
-      prometheus:
-        enabled: true
-        port: 2112
-        serviceMonitor:
-          enabled: true
+      # enabled: true
+      # prometheus:
+      #   enabled: true
+      #   port: 2112
+      #   serviceMonitor:
+      #     enabled: true
     dnsPolicy: ClusterFirstWithHostNet
     export:
       grafana:
