@@ -11,6 +11,7 @@ spec:
         kind: HelmRepository
         name: minio-operator
         namespace: minio-operator
+  interval: 10m0s
   values:
     secrets:
       enabled: true

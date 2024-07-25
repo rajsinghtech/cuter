@@ -32,4 +32,5 @@ spec:
         kind: HelmRepository
         name: isovalent
         namespace: kube-system
+  interval: 10m0s
   values:
