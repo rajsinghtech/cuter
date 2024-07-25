@@ -25,7 +25,7 @@ spec:
     tetragon:
       btf: /sys/kernel/btf/vmlinux
       enabled: true
-      grpc:
-        address: localhost:54321
-        enabled: false
+      # grpc:
+      #   address: localhost:54321
+      #   enabled: false
     exportDirectory: "/var/run/cilium/hubble"

@@ -30,15 +30,12 @@ spec:
         port: 2112
         serviceMonitor:
           enabled: true
-
     dnsPolicy: ClusterFirstWithHostNet
     export:
       grafana:
         dashboards:
           enabled: true
           namespace: monitoring
-          labels:
-            grafana_dashboard: "2"
       extraEnv:
         - name: AWS_ACCESS_KEY_ID
           valueFrom:
