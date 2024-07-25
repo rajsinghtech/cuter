@@ -25,3 +25,10 @@ spec:
     #   createConfigMaps: true
     #   enabled: true
     #   enabledNodesGraph: true
+    relay:
+      enabled: true
+    # tls:
+    #   enabled: true
+    metrics:
+      enabled:
+        - flow_export
