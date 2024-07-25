@@ -4,7 +4,6 @@ kind: HelmRelease
 metadata:
   name: monitoring
 spec:
-  interval: 2m
   driftDetection:
     mode: enabled
   chart:
@@ -14,15 +13,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-  install:
-    remediation:
-      retries: 3
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 3
-  uninstall:
-    keepHistory: false
   values:
     grafana:
       admin:
@@ -44,7 +34,7 @@ spec:
           requests:
             cpu: 200m
             memory: 200Mi
-        podMonitorNamespaceSelector: { }
+        podMonitorNamespaceSelector: {}
         podMonitorSelector:
           matchLabels:
             app.kubernetes.io/component: monitoring

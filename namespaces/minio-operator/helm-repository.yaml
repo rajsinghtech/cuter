@@ -4,5 +4,4 @@ kind: HelmRepository
 metadata:
   name: minio-operator
 spec:
-  interval: 1h
   url: https://operator.min.io

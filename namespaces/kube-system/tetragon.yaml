@@ -4,7 +4,6 @@ metadata:
   name: tetragon
   namespace: kube-system
 spec:
-  interval: 2m
   chart:
     spec:
       chart: tetragon
@@ -12,15 +11,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: isovalent
-  install:
-    remediation:
-      retries: 3
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 3
-  uninstall:
-    keepHistory: false
   values:
     tetragon:
       btf: /sys/kernel/btf/vmlinux

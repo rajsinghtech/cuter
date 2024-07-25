@@ -4,5 +4,4 @@ kind: HelmRepository
 metadata:
   name: altinity
 spec:
-  interval: 1h
   url: https://docs.altinity.com/clickhouse-operator

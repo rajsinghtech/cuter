@@ -3,7 +3,6 @@ kind: HelmRelease
 metadata:
   name: tenant
 spec:
-  interval: 2m
   chart:
     spec:
       chart: tenant
@@ -12,15 +11,6 @@ spec:
         kind: HelmRepository
         name: minio-operator
         namespace: minio-operator
-  install:
-    remediation:
-      retries: 3
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 3
-  uninstall:
-    keepHistory: false
   values:
     secrets:
       enabled: true

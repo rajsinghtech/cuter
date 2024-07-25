@@ -4,7 +4,6 @@ metadata:
   name: cilium
   namespace: flux-system
 spec:
-  interval: 1h
   url: https://helm.cilium.io
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
@@ -13,5 +12,4 @@ metadata:
   name: isovalent
   namespace: flux-system
 spec:
-  interval: 1h
   url: https://helm.isovalent.com

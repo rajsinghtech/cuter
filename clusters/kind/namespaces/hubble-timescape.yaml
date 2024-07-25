@@ -10,4 +10,3 @@ spec:
     name: flux-system
   path: namespaces/hubble-timescape
   prune: true
-  timeout: 1m

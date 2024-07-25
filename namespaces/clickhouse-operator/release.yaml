@@ -4,7 +4,6 @@ metadata:
   name: clickhouse-operator
   namespace: kube-system
 spec:
-  interval: 2m
   chart:
     spec:
       chart: altinity-clickhouse-operator
@@ -12,15 +11,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: altinity
-  install:
-    remediation:
-      retries: 3
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 3
-  uninstall:
-    keepHistory: false
   values:
     operator:
       env:
