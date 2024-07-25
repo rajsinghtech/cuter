@@ -40,5 +40,4 @@ spec:
         configuration: false
       log:
         disabled: true
-      prometheus:
-        disabled: true
+      prometheusOperator: true

@@ -21,6 +21,8 @@ spec:
       namespace: monitoring
     prometheus:
       enabled: true
+      serviceMonitor:
+        enabled: true
     operator:
       dashboards:
         enabled: true
@@ -28,6 +30,8 @@ spec:
       replicas: 1
       prometheus:
         enabled: true
+        serviceMonitor:
+          enabled: true
     bgpControlPlane:
       enabled: true
     ipv4:
@@ -70,6 +74,8 @@ spec:
         enabled: true
         prometheus:
           enabled: true
+          serviceMonitor:
+            enabled: true
       tls:
         enabled: true
       metrics:
