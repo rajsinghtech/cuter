@@ -23,14 +23,14 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    enterprise:
-      btf: /sys/kernel/btf/vmlinux
-      enabled: true
-      prometheus:
-        enabled: true
-        port: 2112
-        serviceMonitor:
-          enabled: true
+    # enterprise:
+    #   btf: /sys/kernel/btf/vmlinux
+    #   enabled: true
+    #   prometheus:
+    #     enabled: true
+    #     port: 2112
+    #     serviceMonitor:
+    #       enabled: true
     dnsPolicy: ClusterFirstWithHostNet
     export:
       grafana:

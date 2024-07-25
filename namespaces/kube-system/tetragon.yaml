@@ -22,10 +22,12 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    # tetragon:
-    #   btf: /sys/kernel/btf/vmlinux
-    #   enabled: true
-      # grpc:
-      #   address: localhost:54321
-      #   enabled: false
+    tetragon:
+      btf: /sys/kernel/btf/vmlinux
+      enabled: true
+      prometheus:
+        enabled: true
+        port: 2112
+        serviceMonitor:
+          enabled: true
     exportDirectory: "/var/run/cilium/hubble"
