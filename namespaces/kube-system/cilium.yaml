@@ -57,4 +57,11 @@ spec:
     hostFirewall:
       enabled: true
     hubble:
-      enabled: false
+      enabled: true
+      relay:
+        enabled: true
+      tls:
+        enabled: true
+      metrics:
+        enabled:
+          - flow_export
