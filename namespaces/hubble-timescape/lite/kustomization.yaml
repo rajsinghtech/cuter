@@ -8,3 +8,5 @@ configMapGenerator:
   - name: hubble-timescape-values
     files:
       - values.yaml
+    options:
+      disableNameSuffixHash: true
