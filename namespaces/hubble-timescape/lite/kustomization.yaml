@@ -4,6 +4,7 @@ namespace: hubble-timescape
 resources:
   - namespace.yaml
   - release.yaml
+  - secret.yaml
 configMapGenerator:
   - name: hubble-timescape-values
     files:
