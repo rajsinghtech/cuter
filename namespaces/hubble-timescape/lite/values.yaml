@@ -1,6 +1,8 @@
 lite:
   enabled: true
-
+  image:
+    repository: quay.io/isovalent/hubble-timescape
+    tag: "v1.4.0-rc.1"
 clickhouse:
   cluster:
     enabled: false
