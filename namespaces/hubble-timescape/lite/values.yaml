@@ -19,7 +19,7 @@ ingester:
     basicAuth:
       enabled: true
     tls:
-      enabled: true
+      enabled: false
       auto:
         enabled: true
         # method: certmanager
