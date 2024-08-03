@@ -14,14 +14,10 @@ spec:
         name: isovalent
   interval: 10m0s
   values:
-    serviceAccount:
-      create: true
-      name: hubble-ui
-      annotations: {}
-    rollOutPods: true
     timescape:
       enabled: true
-    # grafana:
-    #   createConfigMaps: true
-    #   enabled: true
-    #   enabledNodesGraph: true
+      address: "hubble-timescape.hubble-timescape"
+    grafana:
+      enabled: true
+      enabledNodesGraph: true
+      namespace: "monitoring"
